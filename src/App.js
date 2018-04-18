@@ -11,9 +11,7 @@ class App extends Component {
   }
 
   changeUsernameHandler = (event) => {
-    this.setState({
-      username: event.target.value  
-    })
+    this.setState({username: event.target.value});
   }
 
   render() {
@@ -35,7 +33,7 @@ const InlineStyle = {
       <br />
 
         <UserInput
-          changed={this.changeUsernameHandler}
+          changed={this.changeUsernameHandler} {/* 메소드 쌩으로 호출할때 () 뒤에 절대 붙이지 말기! 불이면 렌더링 할때 자동으로 호출됨*/}
           username={this.state.username} 
         />
         <br />

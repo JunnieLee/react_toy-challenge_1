@@ -7,8 +7,14 @@ import './UserInput.css'; // 얠 이렇게 manually 데려와야 저 css파일�
 const userInput = (props) => { // props argument를 pass 해줘야 다른데서 이 아이의 property에 자유로이 접근 및 정의?할 수 있음!
 	return (
 		<div className="userInput">
-			<input type="text" onChange={props.changed} placeholder={props.username}/>
-				{/* onChange will be fired whenever the value of the input changes! */}	   
+			<input 
+				type="text" 
+				onChange={props.changed} 
+				{/* onChange will be fired whenever the value of the input changes! */}	 
+				{/* onChange나 onClick과 같은 특수한 term들이 event를 발생시킴. 
+					event 발생시키는 term들 document 참고하고 알아두도록..*/}  
+				placeholder={props.username}
+			/>			
 		</div>					
 		)			
 
